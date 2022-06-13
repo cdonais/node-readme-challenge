@@ -1,13 +1,14 @@
 // TODO: Include packages needed for this application
-const generateMarkdown=require('./utils./generateMarkdown')
+const generateMarkdown=require('./utils/generateMarkdown.js');
 const inquirer=require('inquirer');
 const fs=require('fs');
 // TODO: Create an array of questions for user input
-const questions =[
+const promptUser =()=>{
+        return inquirer.prompt([
         {
             type: 'input',
-            name: 'name',
-            message: 'What is the name of your project?',
+            name: 'title',
+            message: 'What is the title of your project?',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -16,6 +17,12 @@ const questions =[
                     return false;
                 }
             }
+        },
+        {
+            type: 'checkbox',
+            name: 'license',
+            message: 'What license did you use?',
+            choices: ['MIT', 'Apache 2.0', 'GNU', 'None']
         },
         {
             type: 'input',
@@ -57,10 +64,10 @@ const questions =[
         },
         {
             type: 'input',
-            name: 'contributing',
+            name: 'contributions',
             message: 'Who contributed to this project?',
-            validate: contributingInput => {
-                if(contributingInput){
+            validate: contributionsInput => {
+                if(contributionsInput){
                     return true;
                 } else {
                     console.log('Please enter a response.');
@@ -71,7 +78,15 @@ const questions =[
         {
            type: 'input',
            name: 'tests',
-           message: 'What tests did you do?',  
+           message: 'How can a user test your application?',
+           validate: testsInput => {
+               if(testsInput){
+                   return true;
+               } else {
+                   console.log('Please enter a response.');
+                   return false;
+               }
+           }  
         },
         {
             type:'input',
@@ -86,27 +101,23 @@ const questions =[
                 }
             }
         },
-        {
-            type: 'checkbox',
-            name: 'languages',
-            message: 'What did you build this project with? Check all that apply.',
-            choices: ['HTML', 'CSS', 'JavaScript', 'Node'] 
-        }
-    ];
+    ]);
+};
 
 // TODO: Create a function to write README file
  function writeToFile(fileName, data) {
-     fs.writeFile(fileName, data, (err) => {
+     fs.writeFile(fileName, data, err => {
          err ? console.error(err) : console.log("Your Readme has been created.")
      });
  }
 
 // // TODO: Create a function to initialize app
- function init() {
-inquirer(questions)
-        .then(userInput)=>generateMarkdown(userInput);
-        .then(writeToFile("README.md",))
- }
+promptUser()
+         .then(data=>{
+             const content=generateMarkdown(data);
+             writeToFile('./utils/README.md', content);
+
+        })
+ 
 
 // // Function call to initialize app
- init();

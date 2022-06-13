@@ -1,46 +1,52 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+//  function renderLicenseBadge(license) {
+//    if(!license){
+//      return('');
+//    }else {
+//   return `![badge](https://img.shields.io/static/v1?label=license&message=${data.license}&color=red)`
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-  if (!license){
-    return('');
-  } else {
+//    };
+//  }
 
-  }
-}
+// // TODO: Create a function that returns the license link
+// // If there is no license, return an empty string
+// function renderLicenseLink(license) {
+//  if(license === none){
+//    return('');
+//  }else {
+
+//     return`https://choosealicense.com/licenses/${data.license}/
+//       .toLowerCase()
+//       .replace(" ", "-")`
+
+//   };
+// }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-    return `
-            # ${data.title}
-            ## Table of Contents
-              1. Description
-              2. Installation
-              3. Usage
-              4. Contributions
-            ## Description
-            ${data.description}
-            ## Built With
-            ${data.languages.map(language=>language).join(', ')}
-            ## Installation
-            ${data.installation}
-            ## Usage
-            ${data.usage}
-            ## Contributions
-            ${data.contributing}
-            ## Tests
-            ${data.tests}
-            ## Questions?
-            Please see Github at https://github.com/${data.github} for any questions.    
-              
-
+//TODO: Create a function to generate markdown for README
+const generateMarkdown=data => {
+    return `# ${data.title} ${data.license}
+## Table of Contents
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributions](#contributions)
+* [License](#license)
+* [Questions](#questions)
+## Description
+${data.description}
+## Installation
+${data.installation}
+## Usage
+${data.usage}
+## Contributions
+${data.contributions}
+## Tests
+${data.tests}
+## Questions?
+Please see Github at https://github.com/${data.github} for any questions.    
 `;
   };
 
