@@ -1,5 +1,6 @@
 # node-readme-challenge
-  
+  ## Link to Video Walkthrough
+  [Video Walkthrough](https://drive.google.com/file/d/1ONeKXtUnb-HGoybEaxyDc2l0RdgnafX-/view)
   ## Table of Contents
   * [Description](#description)
   * [Installation](#installation)
