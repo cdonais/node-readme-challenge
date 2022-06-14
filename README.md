@@ -20,6 +20,11 @@
   Contributions are welcome, please see my github link below.
   ## Tests
   After installation, type node index into the terminal to test the application.
+  ## Screenshots
+  ![initializing program](./images/screenshot1.png)
+  ![prompt responses](./images/screenshot2.png)
+  ![readme code](./images/screenshot3.png)
+  ![readme preview](./images/screenshot4.png)
   ## Questions?
   Please contact me at [Github](https://github.com/cdonais) or email me at [carly.donais@gmail.com](carly.donais@gmail.com) for any questions.   
   

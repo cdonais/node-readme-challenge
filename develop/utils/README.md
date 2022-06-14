@@ -1,4 +1,4 @@
-#  Node ReadMe Generator 
+# Node ReadMe Generator 
 
   ![license badge](https://img.shields.io/static/v1?label=license&message=Apache-2.0&color=red) 
   
@@ -10,15 +10,15 @@
   * [License](#license)
   * [Questions](#questions)
   ## Description
-  An application that allows a user to easily generate a README file.
+  An application that helps a user create a professional readme file based  using the Inquirer NPM.
   ## Installation
-  To use this application you must first download the inquirer NPM, then you can run the application in your terminal.
+  Install the inquirer NPM using your terminal.
   ## Usage
-  To generate a README file using a series of prompts.
+  Creating a professional readme based on a series of prompts
   ## Contributions
-  Contributions are welcome, please see my github link below.
+  Please see github link below to contribute
   ## Tests
-  After installation, type node index into the terminal.
+  Tests may be run by typing 'node index' into your terminal while the application is open.
   ## License
   The license used is [Apache-2.0](https://choosealicense.com/licenses/Apache-2.0/)
   ## Questions?
