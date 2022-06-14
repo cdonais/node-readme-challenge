@@ -1,6 +1,6 @@
-# fjedi 
+#  Node ReadMe Generator 
 
-  ![license badge](https://img.shields.io/static/v1?label=license&message=GNU-AGPL-3.0&color=red) 
+  ![license badge](https://img.shields.io/static/v1?label=license&message=Apache-2.0&color=red) 
   
   ## Table of Contents
   * [Description](#description)
@@ -10,18 +10,17 @@
   * [License](#license)
   * [Questions](#questions)
   ## Description
-  fjdkfj
+  An application that allows a user to easily generate a README file.
   ## Installation
-  fjdkfj
+  To use this application you must first download the inquirer NPM, then you can run the application in your terminal.
   ## Usage
-  fji
+  To generate a README file using a series of prompts.
   ## Contributions
-  fji
+  Contributions are welcome, please see my github link below.
   ## Tests
-  fji
+  After installation, type node index into the terminal.
   ## License
-  The license used for this project is GNU-AGPL-3.0
+  The license used is [Apache-2.0](https://choosealicense.com/licenses/Apache-2.0/)
   ## Questions?
-  Please see Github at https://github.com/fji for any questions. 
-  Or email me at fji   
+  Please contact me at [Github](https://github.com/cdonais) or email me at [carly.donais@gmail.com](carly.donais@gmail.com) for any questions.   
   

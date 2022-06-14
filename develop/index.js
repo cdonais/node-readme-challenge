@@ -133,4 +133,3 @@ promptUser()
         });
  
 
-// // Function call to initialize app
