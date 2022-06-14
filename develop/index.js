@@ -22,7 +22,7 @@ const promptUser =()=>{
             type: 'checkbox',
             name: 'license',
             message: 'What license did you use?',
-            choices: ['MIT', 'Apache 2.0', 'GNU', 'None']
+            choices: ['MIT', 'Apache-2.0', 'GNU-AGPL-3.0', 'None']
         },
         {
             type: 'input',
@@ -65,7 +65,7 @@ const promptUser =()=>{
         {
             type: 'input',
             name: 'contributions',
-            message: 'Who contributed to this project?',
+            message: 'How can others contribute to this project?',
             validate: contributionsInput => {
                 if(contributionsInput){
                     return true;
@@ -91,7 +91,7 @@ const promptUser =()=>{
         {
             type:'input',
             name: 'github',
-            message: 'What is your github link?',
+            message: 'What is your github username?',
             validate: githubInput => {
                 if(githubInput){
                     return true;
@@ -101,6 +101,19 @@ const promptUser =()=>{
                 }
             }
         },
+        {
+            type:'input',
+            name: 'email',
+            message: 'What is your email address?',
+            validate: emailInput => {
+                if(emailInput){
+                    return true;
+                } else {
+                    console.log('Please enter a response');
+                    return false;
+                }
+            }
+        }
     ]);
 };
 
@@ -117,7 +130,7 @@ promptUser()
              const content=generateMarkdown(data);
              writeToFile('./utils/README.md', content);
 
-        })
+        });
  
 
 // // Function call to initialize app
